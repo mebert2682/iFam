@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>iFam - Information For All Music</title>
+</head>
+<body>
+
+
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="login-player">
+    <h1>iFam</h1>
+    <p class="subtitle">Information For All Music</p>
+    <button class="btn btn-lg btn-success" id="login-button">Spotify Login</button>  
+      <h3 id="track"></h3>
+      <h4 id="artist" class="text-muted"></h4>
+      <div id="player-butttons">
+        <span id="prev-button"><i class="fas fa-angle-left"></i></span>
+        <span id="play-button" data-state="play"><i class="fas fa-play"></i></span>
+        <span id="next-button"><i class="fas fa-angle-right"></i></span>
+      </div> 
+    </div>
+
+    <form id="artist-form">
+      <label for="artist-input"></label>
+      <input type="text" id="artist-input"><br>
+    
+      <!-- Button triggers artist search to be added -->
+      <button id="search-artist" value="Search Artist">Search an Artist</button>
+    
+    </form>
+    
+    <h5>Logged in as:</h5>
+
+    <div id="profile-info">
+      
+    </div>
+
+  </div>
+
+
+
+
+  <div class="container-fluid my-5" id="app-body">
+    <div class="row">
+      <!--<div class="col-12 col-md-3">
+        
+        <div id="user-buttons" class="my-3">
+          <div class="btn btn-primary btn-block" id="user-playlists">Get User Playlists</div>
+          <div class="btn btn-info btn-block" id="featured-playlists">Get Featured Playlists</div>
+          <form id="categories" class="mt-4">
+            <h4>Select Categories to Search For</h4>
+            <div class="form-group">
+              <select class="form-control" id="categories-list"></select>
+            </div>
+          </form>-->
+
+        </div>
+      </div>
+
+      <div class="col-12 col-md-12">
+        <div class="row" id="music_info">
+          <div class="col-12 col-md-4 mb-5">
+            <div class="card scrollable">
+              <div class="card-header">
+                Select Album
+              </div>
+              <div id="album-info" class="list-group list-group-flush">
+
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-5">
+            <div class="card scrollable">
+              <div class="card-header">
+                Select Track
+              </div>
+              <div class="list-group list-group-flush" id="track-info">
+                Select Album to Show Tracks
+              </div>
+
+              </div>
+          </div>
+          <d class="col-12 col-md-4 mb-5">
+              <div class="card scrollable">
+                <div class="card-header">
+                  Lyrics
+                </div>
+                <div class="card-body lyrics"></div>
+           </div>
+        </div>
+     </div>
+   </div>
+
+   <div class="container-fluid my-5" id="app-body">
+     
+      <div class="row">
+
+      </div>
+    </div>
+
+    <div class="col-12 col-md-12">
+        <div class="row" id="music_info">
+          <div class="col-12 col-md-4 mb-5">
+            <div class="card scrollable">
+              <div class="card-header">
+                Samples Used
+              </div>
+              <div id="album-info" class="list-group list-group-flush">
+
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-5">
+            <div class="card scrollable">
+              <div class="card-header">
+                Videos
+              </div>
+              <div class="list-group list-group-flush" id="results">
+              </div>
+
+              </div>
+          </div>
+          <d class="col-12 col-md-4 mb-5">
+              <div class="card">
+                <div class="card-header">
+                  Upcoming Concerts
+                </div>
+                <div w-type="event-discovery" w-tmapikey="GpWjMlCBuncpe6ipajDthtUP20wuJSbx" w-googleapikey="AIzaSyAdwhObhy6o8O6VU8xMlMYd_kpS1KXq9fM" w-keyword="concerts" w-theme="simple" w-colorscheme="light" w-width="600" w-height="600" w-size="25" w-border="0" w-borderradius="4" w-postalcode="" w-radius="25" w-city="" w-period="year" w-layout="vertical" w-attractionid="" w-promoterid="" w-venueid="" w-affiliateid="" w-segmentid="" w-proportion="custom" w-titlelink="off" w-sorting="groupByName" w-id="id_b4ig8o" w-countrycode="US" w-source="ticketmaster" w-latlong="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script src="https://ticketmaster-api-staging.github.io/products-and-docs/widgets/event-discovery/1.0.0/lib/main-widget.js"></script>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

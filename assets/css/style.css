@@ -1,0 +1,96 @@
+.jumbotron {
+  
+  min-height: 800px;
+  background-image: url("https://cdn.shopify.com/s/files/1/0513/8241/t/4/assets/slide_1.jpg?8");
+  background-size: cover;
+
+
+}
+
+.login-player {
+
+  text-align: center;
+  padding-top: 290px;
+  padding-left: 1000px;
+}
+
+h1{
+
+color: white;
+
+}
+
+
+
+.subtitle {
+
+color: white;
+
+}
+
+h5 {
+  
+  text-align: center;
+  color: white;
+  margin-left: 1475px;
+  margin-top: -620px;
+
+}
+
+#profile-info {
+
+  text-align: center;
+  color: white;
+  margin-left: 1750px;
+  margin-top: -35px;
+
+}
+
+#artist-form {
+
+  color: white;
+  text-align: center;
+  margin-left: 745px;
+  margin-top: 15px;
+
+}
+
+#subtitle {
+
+  text-align: center
+
+}
+
+#prev-button {
+
+  color: white;
+  
+}
+
+#play-button {
+
+  color: white;
+  
+}
+
+#next-button {
+
+  color: white;
+  
+}
+
+#search-artist {
+
+  margin-top: 10px;
+
+}
+
+.card{
+  width: 600px;
+  height:600px;
+}
+.scrollable{
+  overflow-y: auto;
+  max-height: 600px;
+}
+
