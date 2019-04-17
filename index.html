@@ -11,34 +11,45 @@
 </head>
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar-brand">
+          
+            <img src="assets/images/iFam_logo_white.png" alt="iFam">
+          
+            </nav>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        </div>
+      </nav>
 
 
-  <div class="jumbotron jumbotron-fluid">
-    <div class="login-player">
-    <h1>iFam</h1>
-    <p class="subtitle">Information For All Music</p>
-    <button class="btn btn-lg btn-success" id="login-button">Spotify Login</button>  
-      <h3 id="track"></h3>
-      <h4 id="artist" class="text-muted"></h4>
-      <div id="player-butttons">
-        <span id="prev-button"><i class="fas fa-angle-left"></i></span>
-        <span id="play-button" data-state="play"><i class="fas fa-play"></i></span>
-        <span id="next-button"><i class="fas fa-angle-right"></i></span>
-      </div> 
-    </div>
-
-    <form id="artist-form">
-      <label for="artist-input"></label>
-      <input type="text" id="artist-input"><br>
     
-      <!-- Button triggers artist search to be added -->
-      <button id="search-artist" value="Search Artist">Search an Artist</button>
-    
-    </form>
-    
-    <h5>Logged in as:</h5>
+      <div class="jumbotron jumbotron-fluid">
+      <img src="assets/images/nh_quote.JPG" class="hero-desktop" alt="RIP Nipsey Hussle">
+      <img src="assets/images/nh_quote_mobile.jpg" class="hero-mobile" alt="RIP Nipsey Hussle">
+      <div class="col-12 col-3 col-md-3 col-sm-12 player-position">
+      <div class= "card-body login-player">
+      <h1><img src="assets/images/iFam_logo_black.jpg" alt="iFam"></h1>
+      <p class="subtitle">Information For All Music</p>
+      <button class="btn btn-lg btn-success" id="login-button">Login with Spotify</button>  
+        <h3 id="track"></h3>
+        <h4 id="artist"></h4>
+        <div id="player-butttons">
+          <span id="prev-button"><i class="fas fa-angle-left"></i></span>
+          <span id="play-button" data-state="play"><i class="fas fa-play"></i></span>
+          <span id="next-button"><i class="fas fa-angle-right"></i></span>
+        </div> 
 
-    <div id="profile-info">
+      <form id="artist-form">
+          <label for="artist-input"></label>
+          <input type="text" id="artist-input"><br>
+        
+          <!-- Button triggers artist search to be added -->
+          <button id="search-artist" value="Search Artist">Search an Artist</button>
+        
+        </form>
+
+      </div>
       
     </div>
 
@@ -46,7 +57,7 @@
 
 
 
-
+<div id="all-music-info">
   <div class="container-fluid my-5" id="app-body">
     <div class="row">
       <!--<div class="col-12 col-md-3">
@@ -65,22 +76,23 @@
       </div>
 
       <div class="col-12 col-md-12">
+
         <div class="row" id="music_info">
           <div class="col-12 col-md-4 mb-5">
-            <div class="card scrollable">
               <div class="card-header">
-                Select Album
-              </div>
+                  Select Album
+                </div>
+            <div class="card scrollable">
               <div id="album-info" class="list-group list-group-flush">
 
               </div>
             </div>
           </div>
           <div class="col-12 col-md-4 mb-5">
-            <div class="card scrollable">
               <div class="card-header">
-                Select Track
-              </div>
+                  Select Track
+                </div>
+            <div class="card scrollable">
               <div class="list-group list-group-flush" id="track-info">
                 Select Album to Show Tracks
               </div>
@@ -88,17 +100,17 @@
               </div>
           </div>
           <d class="col-12 col-md-4 mb-5">
-              <div class="card scrollable">
-                <div class="card-header">
+              <div class="card-header">
                   Lyrics
-                </div>
+                </div>   
+            <div class="card scrollable">
                 <div class="card-body lyrics"></div>
            </div>
         </div>
      </div>
-   </div>
+  
 
-   <div class="container-fluid my-5" id="app-body">
+   <div class="container" id="app-body">
      
       <div class="row">
 
@@ -107,36 +119,45 @@
 
     <div class="col-12 col-md-12">
         <div class="row" id="music_info">
-          <div class="col-12 col-md-4 mb-5">
+          <!--<div class="col-12 col-md-4 mb-5">
             <div class="card scrollable">
               <div class="card-header">
                 Samples Used
               </div>
-              <div id="album-info" class="list-group list-group-flush">
+              <div id="sample-info" class="list-group list-group-flush">
 
               </div>
             </div>
-          </div>
-          <div class="col-12 col-md-4 mb-5">
-            <div class="card scrollable">
+          </div>-->
+          <div class="col-12 col-md-6 mb-5">
               <div class="card-header">
-                Videos
+                  Videos
+                </div>
+            <div class="card scrollable youtube">
+              <div class="card-body videos">
               </div>
-              <div class="list-group list-group-flush" id="results">
+              <div class="list-group list-group-flush" >
               </div>
 
               </div>
           </div>
-          <d class="col-12 col-md-4 mb-5">
+          <d class="col-12 col-md-6 mb-5">
               <div class="card">
-                <div class="card-header">
-                  Upcoming Concerts
+                <div class="card-header live-events">
+                  Upcoming Events
                 </div>
-                <div w-type="event-discovery" w-tmapikey="GpWjMlCBuncpe6ipajDthtUP20wuJSbx" w-googleapikey="AIzaSyAdwhObhy6o8O6VU8xMlMYd_kpS1KXq9fM" w-keyword="concerts" w-theme="simple" w-colorscheme="light" w-width="600" w-height="600" w-size="25" w-border="0" w-borderradius="4" w-postalcode="" w-radius="25" w-city="" w-period="year" w-layout="vertical" w-attractionid="" w-promoterid="" w-venueid="" w-affiliateid="" w-segmentid="" w-proportion="custom" w-titlelink="off" w-sorting="groupByName" w-id="id_b4ig8o" w-countrycode="US" w-source="ticketmaster" w-latlong="">
+              <div class="widget">
+                <div w-type="event-discovery" w-tmapikey="GpWjMlCBuncpe6ipajDthtUP20wuJSbx" w-googleapikey="AIzaSyAdwhObhy6o8O6VU8xMlMYd_kpS1KXq9fM" w-keyword="live concerts" w-theme="simple" w-colorscheme="light" w-width="550" w-height="550" w-size="25" w-border="0" w-borderradius="4" w-postalcode="" w-radius="25" w-city="" w-period="year" w-layout="vertical" w-attractionid="" w-promoterid="" w-venueid="" w-affiliateid="" w-segmentid="" w-proportion="custom" w-titlelink="off" w-sorting="groupByName" w-id="id_b4ig8o" w-countrycode="US" w-source="ticketmaster" w-latlong="">
                 </div>
+              </div> 
             </div>
         </div>
      </div>
+  </div>
+
+  <footer>iFam Copyright© 2019</footer>
+
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

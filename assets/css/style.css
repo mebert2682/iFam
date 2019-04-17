@@ -1,22 +1,82 @@
-.jumbotron {
-  
-  min-height: 800px;
-  background-image: url("https://cdn.shopify.com/s/files/1/0513/8241/t/4/assets/slide_1.jpg?8");
-  background-size: cover;
+.navbar {
 
+  list-style-type: none;
+  background-color: #fff;
+  height: 75px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  border-bottom: 2px solid #cccccc;
+  padding-right: 0px;
+  padding-left: 0px;
+  z-index: 100;
+}
+
+.navbar-brand {
+
+  text-align: center;
+  margin-left: 46%;
+  margin-right:54%;
+  
+
+}
+
+#all-music-info {
+
+  display: none;
+  padding-top: 75px;
+  
+
+}
+
+.hero-desktop {
+  height: auto;
+  width: 100%;
+  
+}
+
+.hero-mobile {
+
+display: none;
 
 }
 
 .login-player {
-
+  background-color: rgb(0,0,0, 0.1);
   text-align: center;
-  padding-top: 290px;
-  padding-left: 1000px;
+
+}
+
+.player-position {
+
+  margin-left: 60%;
+  margin-top: -25%;
+  min-height: 300px;
+
+}
+
+#player-buttons {
+
+  margin-bottom: 12px;
+
 }
 
 h1{
 
 color: white;
+
+}
+
+h3 {
+
+  color: #28a745;
+
+}
+
+h4 {
+
+  color: #28a745;
 
 }
 
@@ -32,8 +92,8 @@ h5 {
   
   text-align: center;
   color: white;
-  margin-left: 1475px;
-  margin-top: -620px;
+  margin-left: 70%;
+  margin-top: -40%;
 
 }
 
@@ -46,14 +106,6 @@ h5 {
 
 }
 
-#artist-form {
-
-  color: white;
-  text-align: center;
-  margin-left: 745px;
-  margin-top: 15px;
-
-}
 
 #subtitle {
 
@@ -85,12 +137,82 @@ h5 {
 
 }
 
-.card{
-  width: 600px;
-  height:600px;
-}
+
 .scrollable{
   overflow-y: auto;
   max-height: 600px;
 }
+
+
+.card-header{
+
+  background-color: #28a745;
+  color: white;
+
+}
+
+
+.badge-pill{
+
+  background-color: #28a745;
+
+}
+
+iframe {
+
+width: 100%;
+
+}
+
+.widget{
+
+  padding-top: 48px;
+  margin-left: 20%;
+
+}
+
+footer{
+  list-style-type: none;
+  background-color: #fff;
+  height: 50px;
+  width: 100%;
+  position: static;
+  padding-right: 0px;
+  padding-left: 0px;
+  text-align: center;
+  margin-top: 162px;
+  align-content: center;
+  }
+
+@media only screen and (max-width: 640px) {
+
+  .card-header{
+
+    margin-right: -222px;
+    
+  }
+
+  .scrollable{
+
+    margin-right: -222px;
+   
+  }
+
+  .hero-desktop {
+    display: none;
+    
+  }
+  
+  .hero-mobile {
+  
+  display: block;
+  margin-top: 44px;
+  
+  }
+
+
+
+
+}
+
 

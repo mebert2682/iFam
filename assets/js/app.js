@@ -177,13 +177,16 @@ function setWebPlayer(playerId, access_token) {
 $("#search-artist").on("click", function(e){
   e.preventDefault();
 console.log($("#artist-input").val().trim());
-  getArtistInfo()
+var artist = $("#artist-input").val().trim();
+
+  getArtistInfo(artist);
+  getYouTube(artist);
+  document.getElementById("all-music-info").style.display = "block";
 
 })
 
-function getArtistInfo() {
+function getArtistInfo(artist) {
 console.log("here")
-var artist = $("#artist-input").val().trim();
 var queryUrl = `https://api.spotify.com/v1/search?q=${artist}&type=artist&market=US`
 
 
@@ -257,7 +260,7 @@ function printArtistAlbums(albumArray) {
       .addClass("list-group-item d-flex justify-content-between align-items-center playlist-button list-group-item-action")
       .attr({"album-name": items.name, "album-uri": items.uri})
       .html(items.name)
-      .append(`<span class="badge badge-danger badge-pill">Play Album</span>`)
+      .append(`<span class="badge badge-danger badge-pill">Select Album</span>`)
       .appendTo($artistAlbums);
 
       console.log(items.uri);
@@ -657,29 +660,70 @@ function getCurrentSong() {
 
 
 //get youtube videos
+  
+function getYouTube(artist) {
 
-function start() {
-  // Initializes the client with the API key and the Translate API.
-  gapi.client.init({
-    'apiKey': 'AIzaSyAdwhObhy6o8O6VU8xMlMYd_kpS1KXq9fM',
-    'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/translate/v2/rest'],
-  }).then(function() {
-    // Executes an API request, and returns a Promise.
-    // The method name `language.translations.list` comes from the API discovery.
-    return gapi.client.language.translations.list({
-      q: 'drake',
-      source: 'en',
-      target: 'de',
-    });
-  }).then(function(response) {
-    console.log(response.result.data.translations[0].translatedText);
-  }, function(reason) {
-    console.log('Error: ' + reason.result.error.message);
-  });
-};
+  console.log(artist);
+  var key = `AIzaSyAdwhObhy6o8O6VU8xMlMYd_kpS1KXq9fM`;
+  var URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${artist}`;
 
-// Loads the JavaScript client library and invokes `start` afterwards.
-gapi.load('client', start);
+  var options = {
+    part: `snippet`,
+    key: key,
+  }
+
+
+    $.getJSON(URL, options, function(response){
+    console.log(response)
+
+      displayArtistVideos(response.items)
+
+      console.log(response.items);
+
+    })
+
+  }
+
+
+// display artist videos
+
+function displayArtistVideos(videoArray) {
+  
+  console.log(videoArray)
+
+
+
+  
+  $(".videos").empty();
+  videoArray.forEach(function (video) {
+  
+    console.log(video);
+    console.log(video.id.videoId)
+
+    $(".videos").append(` 
+      <div class="video-wrapper"> 
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/${video.id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    `)
+
+
+  
+  
+  
+  
+    // $("<button>")
+    // .attr({"video-name":snippet.title, "video-id":id.videoId})
+    // .append(".videos")
+    // .appendTo($artistVideos);
+
+    // console.log($artistVideos)
+
+  }); 
+
+
+
+}
+
 
 // get categories on load to select from
 function getCategories() {
@@ -748,6 +792,3 @@ $(document)
       $("#app-body").hide();
     } 
   });
-
-
- 
