@@ -183,6 +183,14 @@ var artist = $("#artist-input").val().trim();
   getYouTube(artist);
   document.getElementById("all-music-info").style.display = "block";
 
+  $("#search-artist").click(function() {
+    $("#tracks-info").empty();
+  });
+
+  $("#search-artist").click(function() {
+    $(".lyrics").empty();
+  });
+
 })
 
 function getArtistInfo(artist) {
@@ -369,7 +377,6 @@ function printAlbumTracks(trackArray) {
       .appendTo($albumTracks);
 
       console.log(items.id);
-
 
     
   });
