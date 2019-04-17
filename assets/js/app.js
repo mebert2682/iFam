@@ -130,7 +130,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 // LOG INTO SPOTIFY
 function spotifyLogin() {
   const client_id = spotify_CLIENT; // Your client id
-  const redirect_uri = 'http://127.0.0.1:5500';
+  const redirect_uri = 'https://mebert2682.github.io/iFam/';
 
   // generate random state key
   const state = generateRandomString(16);
@@ -184,7 +184,7 @@ var artist = $("#artist-input").val().trim();
   document.getElementById("all-music-info").style.display = "block";
 
   $("#search-artist").click(function() {
-    $("#tracks-info").empty();
+    $(".tracks").empty();
   });
 
   $("#search-artist").click(function() {
